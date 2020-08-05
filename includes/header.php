@@ -24,11 +24,11 @@ require_once("includes/classes/Producto.php");
 
     <style>
     .gris{
-        background: rgba(153, 50, 179, 0.5);
+        background: rgb(248, 245, 245);
     }
 
     .top-nav-collapse{
-        background: rgba(153, 50, 179, 1) !important;
+        background: rgb(248, 245, 245) !important;
     }
     </style>
 
@@ -54,3 +54,7 @@ require_once("includes/classes/Producto.php");
 <body>
 
 <?php include_once("includes/navBar.php"); ?>
+
+<div style="height: 112.5px;">
+  
+</div>

@@ -66,7 +66,7 @@ class PreviewProvider {
 
         return "
         <div class='col-3'>
-                <div class='card'>
+                <div class='card deep-purple lighten-4'>
                             <!-- Card image -->
                             <div class='view overlay'>
 
@@ -76,20 +76,41 @@ class PreviewProvider {
                                 </a>
                             </div>
 
-                            <div class='card-body'>
+                            <div class='text-center card-body'>
 
                                 <!-- Title -->
-                                <h4 class='card-title'>$name <p class=' red-text badge purple-gradient text-wrap '>$ $precio</p></h4>
+                                <h4 class='card-title'>$name </h4>
+                                <p class='red-text badge purple-gradient text-wrap '>$ $precio</p>
                                 <!-- Text -->
                                 <p class='card-text'>
                                     </p>
                                 <!-- Button -->
-                                <a href='producto.php?id=$id' class='btn btn-primary'>Ver</a>
+                                <a href='producto.php?id=$id' class='font-weight-bold text-dark'>Ver más</a>
 
                             </div>
                             
                 </div>
             </div>
+                ";
+    } // Fin de la funcion createEntityPreviewSquad 
+
+    public function createEntityNotice($entity){
+        $id = $entity->getId();
+        $thumbnail = $entity->getThumbnail();
+        $name = $entity->getName();
+        $precio = $entity->getPrecio();
+
+        return "<div class='carousel-item'>
+                    <div class='view'>
+                        <img class='d-block w-100' src='$thumbnail'
+                        alt='First slide'>
+                        <div class='mask rgba-black-light'></div>
+                    </div>
+                    <div class='carousel-caption'>
+                        <h3 class='h3-responsive'>Light mask</h3>
+                        <p>First text</p>
+                    </div>
+                </div>
                 ";
     } // Fin de la funcion createEntityPreviewSquad 
 
